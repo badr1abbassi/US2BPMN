@@ -5,7 +5,7 @@ Transformation des User stories vers BPMN utilisant henshin
 <h2>Transformations opérationnelles: </h2>
 <ul>
   <li>initModel(BacklogId,name) </li>
-  <li>Creation des activitée : tasks(BacklogId,name) </li>
+  <li>Creation des activitées : tasks(BacklogId,name) </li>
   <li>Creation des start/END Events:StartEvent(name,?) && EndEvent(?,name)</li>
   <li>Creation des Sequences Flow: CreateSequenceFlow(?,?,name)</li>
 </ul>
