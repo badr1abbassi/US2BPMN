@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/US_TO_BPMN/src" modelPluginID="US_TO_BPMN" modelName="UserStories"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>UserStories.ecore</foreignModel>
+  <genPackages prefix="US" disposableProviderFactory="true" ecorePackage="UserStories.ecore#/">
+    <genClasses ecoreClass="UserStories.ecore#//UserStory">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UserStories.ecore#//UserStory/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UserStories.ecore#//UserStory/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UserStories.ecore#//UserStory/activities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UserStories.ecore#//UserStory/roles"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UserStories.ecore#//UserStory/values"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UserStories.ecore#//UserStory/successeurs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UserStories.ecore#//UserStory/statusNextSucc"/>
+    </genClasses>
+    <genClasses ecoreClass="UserStories.ecore#//Activity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UserStories.ecore#//Activity/preconditions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UserStories.ecore#//Activity/postcondition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UserStories.ecore#//Activity/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UserStories.ecore#//Activity/name"/>
+    </genClasses>
+    <genClasses ecoreClass="UserStories.ecore#//Role">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UserStories.ecore#//Role/name"/>
+    </genClasses>
+    <genClasses ecoreClass="UserStories.ecore#//Value">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UserStories.ecore#//Value/value"/>
+    </genClasses>
+    <genClasses ecoreClass="UserStories.ecore#//Backlog">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UserStories.ecore#//Backlog/uss"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UserStories.ecore#//Backlog/NomProcessus"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

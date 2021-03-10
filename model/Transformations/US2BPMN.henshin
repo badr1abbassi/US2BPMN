@@ -1,0 +1,945 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_mEUusHm-Eeum17r4CxAcPg">
+  <imports href="../BPMN_meta/BPMN20.ecore#/"/>
+  <imports href="../US_meta/UserStories.ecore#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_bYOGcHnAEeum17r4CxAcPg" name="initModel">
+    <parameters xmi:id="_TMTjAHnCEeu2Hft-zWXcuw" name="BacklogId" kind="IN">
+      <annotations xmi:id="_lYs0cHniEeu1j4PqRzC4dg" key="BacklogId" value="userId"/>
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_lbRN0HnCEeu2Hft-zWXcuw" name="name" kind="IN">
+      <annotations xmi:id="_omXqUHniEeu1j4PqRzC4dg" key="name" value="user"/>
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_bYQisnnAEeum17r4CxAcPg" name="Lhs">
+      <nodes xmi:id="_c4mUEHnAEeum17r4CxAcPg">
+        <type href="../US_meta/UserStories.ecore#//Backlog"/>
+        <attributes xmi:id="_ad7REHpzEeuha7FtSsql_g" value="BacklogId">
+          <type href="../US_meta/UserStories.ecore#//Backlog/backlogId"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_eA4KwHnAEeum17r4CxAcPg">
+        <type href="../US_meta/UserStories.ecore#//Role"/>
+        <attributes xmi:id="_8LW2QHnJEeuXZrSHFC6uYQ" value="name">
+          <type href="../US_meta/UserStories.ecore#//Role/name"/>
+        </attributes>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_bYS-8HnAEeum17r4CxAcPg" name="Rhs">
+      <nodes xmi:id="_c4mUEXnAEeum17r4CxAcPg">
+        <type href="../US_meta/UserStories.ecore#//Backlog"/>
+        <attributes xmi:id="_ad7REXpzEeuha7FtSsql_g" value="BacklogId">
+          <type href="../US_meta/UserStories.ecore#//Backlog/backlogId"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_eA4KwXnAEeum17r4CxAcPg">
+        <type href="../US_meta/UserStories.ecore#//Role"/>
+        <attributes xmi:id="_8LW2QXnJEeuXZrSHFC6uYQ" value="name">
+          <type href="../US_meta/UserStories.ecore#//Role/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_sThJ8HnAEeum17r4CxAcPg" outgoing="_8BEA4HnAEeum17r4CxAcPg _8mebEHnAEeum17r4CxAcPg">
+        <type href="../BPMN_meta/BPMN20.ecore#//Definitions"/>
+        <attributes xmi:id="_cV1TUHnCEeu2Hft-zWXcuw" value="BacklogId">
+          <type href="../BPMN_meta/BPMN20.ecore#//BaseElement/id"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_xflmMHnAEeum17r4CxAcPg" incoming="_8mebEHnAEeum17r4CxAcPg">
+        <type href="../BPMN_meta/BPMN20.ecore#//Collaboration"/>
+        <attributes xmi:id="_HGDGYHnDEeu2Hft-zWXcuw" value="name">
+          <type href="../BPMN_meta/BPMN20.ecore#//Collaboration/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_0CwGgHnAEeum17r4CxAcPg" incoming="_8BEA4HnAEeum17r4CxAcPg" outgoing="_CbnCcHnBEeum17r4CxAcPg">
+        <type href="../BPMN_meta/BPMN20.ecore#//Process"/>
+        <attributes xmi:id="_flMLQHnCEeu2Hft-zWXcuw" value="name+&quot;Process&quot;">
+          <type href="../BPMN_meta/BPMN20.ecore#//BaseElement/id"/>
+        </attributes>
+        <attributes xmi:id="_JQp8wHnDEeu2Hft-zWXcuw" value="name">
+          <type href="../BPMN_meta/BPMN20.ecore#//CallableElement/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_235HoHnAEeum17r4CxAcPg" incoming="_CuwA4HnBEeum17r4CxAcPg">
+        <type href="../BPMN_meta/BPMN20.ecore#//Lane"/>
+        <attributes xmi:id="_Wp0WQHnDEeu2Hft-zWXcuw" value="&quot;Lane&quot;+name">
+          <type href="../BPMN_meta/BPMN20.ecore#//BaseElement/id"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_3KmBMHnAEeum17r4CxAcPg" incoming="_CbnCcHnBEeum17r4CxAcPg" outgoing="_CuwA4HnBEeum17r4CxAcPg">
+        <type href="../BPMN_meta/BPMN20.ecore#//LaneSet"/>
+        <attributes xmi:id="_PTY7QHnDEeu2Hft-zWXcuw" value="&quot;LaneSet&quot;+name">
+          <type href="../BPMN_meta/BPMN20.ecore#//BaseElement/id"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_8BEA4HnAEeum17r4CxAcPg" source="_sThJ8HnAEeum17r4CxAcPg" target="_0CwGgHnAEeum17r4CxAcPg">
+        <type href="../BPMN_meta/BPMN20.ecore#//Definitions/rootElements"/>
+      </edges>
+      <edges xmi:id="_8mebEHnAEeum17r4CxAcPg" source="_sThJ8HnAEeum17r4CxAcPg" target="_xflmMHnAEeum17r4CxAcPg">
+        <type href="../BPMN_meta/BPMN20.ecore#//Definitions/rootElements"/>
+      </edges>
+      <edges xmi:id="_CbnCcHnBEeum17r4CxAcPg" source="_0CwGgHnAEeum17r4CxAcPg" target="_3KmBMHnAEeum17r4CxAcPg">
+        <type href="../BPMN_meta/BPMN20.ecore#//FlowElementsContainer/laneSets"/>
+      </edges>
+      <edges xmi:id="_CuwA4HnBEeum17r4CxAcPg" source="_3KmBMHnAEeum17r4CxAcPg" target="_235HoHnAEeum17r4CxAcPg">
+        <type href="../BPMN_meta/BPMN20.ecore#//LaneSet/lanes"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_c4mUEnnAEeum17r4CxAcPg" origin="_c4mUEHnAEeum17r4CxAcPg" image="_c4mUEXnAEeum17r4CxAcPg"/>
+    <mappings xmi:id="_eA4KwnnAEeum17r4CxAcPg" origin="_eA4KwHnAEeum17r4CxAcPg" image="_eA4KwXnAEeum17r4CxAcPg"/>
+    <multiRules xmi:id="_aqo80HnCEeu2Hft-zWXcuw">
+      <parameters xmi:id="_aqz78HnCEeu2Hft-zWXcuw" name="BacklogId" kind="IN">
+        <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameters>
+      <parameters xmi:id="_HGDGYXnDEeu2Hft-zWXcuw" name="name" kind="IN">
+        <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameters>
+      <lhs xmi:id="_aqo80XnCEeu2Hft-zWXcuw" name="Lhs">
+        <nodes xmi:id="_aqpj53nCEeu2Hft-zWXcuw" outgoing="_eaBDgHnAEeum17r4CxAcPg">
+          <type href="../US_meta/UserStories.ecore#//Backlog"/>
+        </nodes>
+        <nodes xmi:id="_dqjVcHnAEeum17r4CxAcPg" incoming="_eaBDgHnAEeum17r4CxAcPg" outgoing="_emhOcHnAEeum17r4CxAcPg">
+          <type href="../US_meta/UserStories.ecore#//UserStory"/>
+        </nodes>
+        <nodes xmi:id="_aqqK93nCEeu2Hft-zWXcuw" incoming="_emhOcHnAEeum17r4CxAcPg">
+          <type href="../US_meta/UserStories.ecore#//Role"/>
+        </nodes>
+        <edges xmi:id="_eaBDgHnAEeum17r4CxAcPg" source="_aqpj53nCEeu2Hft-zWXcuw" target="_dqjVcHnAEeum17r4CxAcPg">
+          <type href="../US_meta/UserStories.ecore#//Backlog/uss"/>
+        </edges>
+        <edges xmi:id="_emhOcHnAEeum17r4CxAcPg" source="_dqjVcHnAEeum17r4CxAcPg" target="_aqqK93nCEeu2Hft-zWXcuw">
+          <type href="../US_meta/UserStories.ecore#//UserStory/role"/>
+        </edges>
+      </lhs>
+      <rhs xmi:id="_aqpj4HnCEeu2Hft-zWXcuw" name="Rhs">
+        <nodes xmi:id="_aqpj4XnCEeu2Hft-zWXcuw" outgoing="_eaBDgXnAEeum17r4CxAcPg">
+          <type href="../US_meta/UserStories.ecore#//Backlog"/>
+        </nodes>
+        <nodes xmi:id="_dqjVcXnAEeum17r4CxAcPg" incoming="_eaBDgXnAEeum17r4CxAcPg" outgoing="_emhOcXnAEeum17r4CxAcPg">
+          <type href="../US_meta/UserStories.ecore#//UserStory"/>
+        </nodes>
+        <nodes xmi:id="_aqqK9HnCEeu2Hft-zWXcuw" incoming="_emhOcXnAEeum17r4CxAcPg">
+          <type href="../US_meta/UserStories.ecore#//Role"/>
+        </nodes>
+        <edges xmi:id="_eaBDgXnAEeum17r4CxAcPg" source="_aqpj4XnCEeu2Hft-zWXcuw" target="_dqjVcXnAEeum17r4CxAcPg">
+          <type href="../US_meta/UserStories.ecore#//Backlog/uss"/>
+        </edges>
+        <edges xmi:id="_emhOcXnAEeum17r4CxAcPg" source="_dqjVcXnAEeum17r4CxAcPg" target="_aqqK9HnCEeu2Hft-zWXcuw">
+          <type href="../US_meta/UserStories.ecore#//UserStory/role"/>
+        </edges>
+      </rhs>
+      <mappings xmi:id="_aqqK83nCEeu2Hft-zWXcuw" origin="_aqpj53nCEeu2Hft-zWXcuw" image="_aqpj4XnCEeu2Hft-zWXcuw"/>
+      <mappings xmi:id="_aqqK-3nCEeu2Hft-zWXcuw" origin="_aqqK93nCEeu2Hft-zWXcuw" image="_aqqK9HnCEeu2Hft-zWXcuw"/>
+      <mappings xmi:id="_dqjVcnnAEeum17r4CxAcPg" origin="_dqjVcHnAEeum17r4CxAcPg" image="_dqjVcXnAEeum17r4CxAcPg"/>
+      <multiMappings xmi:id="_aqpj43nCEeu2Hft-zWXcuw" origin="_c4mUEXnAEeum17r4CxAcPg" image="_aqpj4XnCEeu2Hft-zWXcuw"/>
+      <multiMappings xmi:id="_aqpj6XnCEeu2Hft-zWXcuw" origin="_c4mUEHnAEeum17r4CxAcPg" image="_aqpj53nCEeu2Hft-zWXcuw"/>
+      <multiMappings xmi:id="_aqqK9XnCEeu2Hft-zWXcuw" origin="_eA4KwXnAEeum17r4CxAcPg" image="_aqqK9HnCEeu2Hft-zWXcuw"/>
+      <multiMappings xmi:id="_aqqK-HnCEeu2Hft-zWXcuw" origin="_eA4KwHnAEeum17r4CxAcPg" image="_aqqK93nCEeu2Hft-zWXcuw"/>
+    </multiRules>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_flGPMHnDEeu2Hft-zWXcuw" name="CreateTasks">
+    <parameters xmi:id="_Qkok0HqAEeu93Nq_vwWm5w" name="BacklogId" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_WWzXwHqAEeu93Nq_vwWm5w" name="name">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_1VXsQHqBEeu93Nq_vwWm5w" name="ActivityName" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_flJSgHnDEeu2Hft-zWXcuw" name="Lhs">
+      <nodes xmi:id="_sMPrAHnFEeuXZrSHFC6uYQ">
+        <type href="../BPMN_meta/BPMN20.ecore#//Process"/>
+        <attributes xmi:id="_eQmW0HqGEeu93Nq_vwWm5w" value="name+&quot;Process&quot;">
+          <type href="../BPMN_meta/BPMN20.ecore#//BaseElement/id"/>
+        </attributes>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_flJSgXnDEeu2Hft-zWXcuw" name="Rhs">
+      <nodes xmi:id="_sMPrAXnFEeuXZrSHFC6uYQ">
+        <type href="../BPMN_meta/BPMN20.ecore#//Process"/>
+        <attributes xmi:id="_eQoMAHqGEeu93Nq_vwWm5w" value="name+&quot;Process&quot;">
+          <type href="../BPMN_meta/BPMN20.ecore#//BaseElement/id"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_t9Sf4HqLEeu93Nq_vwWm5w">
+        <type href="../US_meta/UserStories.ecore#//Activity"/>
+        <attributes xmi:id="_t9Sf4XqLEeu93Nq_vwWm5w" value="ActivityName">
+          <type href="../US_meta/UserStories.ecore#//UserStory/id"/>
+        </attributes>
+        <attributes xmi:id="_t9Sf4nqLEeu93Nq_vwWm5w" value="ActivityName">
+          <type href="../US_meta/UserStories.ecore#//Activity/name"/>
+        </attributes>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_sMPrAnnFEeuXZrSHFC6uYQ" origin="_sMPrAHnFEeuXZrSHFC6uYQ" image="_sMPrAXnFEeuXZrSHFC6uYQ"/>
+    <multiRules xmi:id="_vjmWZXqLEeu93Nq_vwWm5w">
+      <parameters xmi:id="_vjrO4HqLEeu93Nq_vwWm5w" name="BacklogId" kind="IN">
+        <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameters>
+      <parameters xmi:id="_vjrO4XqLEeu93Nq_vwWm5w" name="name">
+        <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameters>
+      <parameters xmi:id="_vjrO4nqLEeu93Nq_vwWm5w" name="ActivityName" kind="VAR">
+        <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameters>
+      <lhs xmi:id="_vjm9cHqLEeu93Nq_vwWm5w" name="Lhs">
+        <nodes xmi:id="_vjm9enqLEeu93Nq_vwWm5w">
+          <type href="../BPMN_meta/BPMN20.ecore#//Process"/>
+          <attributes xmi:id="_vjm9e3qLEeu93Nq_vwWm5w" value="name+&quot;Process&quot;">
+            <type href="../BPMN_meta/BPMN20.ecore#//BaseElement/id"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_t9Sf5HqLEeu93Nq_vwWm5w" outgoing="_r-D9oHqMEeu93Nq_vwWm5w">
+          <type href="../US_meta/UserStories.ecore#//Activity"/>
+          <attributes xmi:id="_t9Sf5XqLEeu93Nq_vwWm5w" value="ActivityName">
+            <type href="../US_meta/UserStories.ecore#//UserStory/id"/>
+          </attributes>
+          <attributes xmi:id="_t9Sf5nqLEeu93Nq_vwWm5w" value="ActivityName">
+            <type href="../US_meta/UserStories.ecore#//Activity/name"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_rWiDkHqMEeu93Nq_vwWm5w" incoming="_r-D9oHqMEeu93Nq_vwWm5w">
+          <type href="../US_meta/UserStories.ecore#//Role"/>
+          <attributes xmi:id="_snU9EHqMEeu93Nq_vwWm5w" value="name">
+            <type href="../US_meta/UserStories.ecore#//Role/name"/>
+          </attributes>
+        </nodes>
+        <edges xmi:id="_r-D9oHqMEeu93Nq_vwWm5w" source="_t9Sf5HqLEeu93Nq_vwWm5w" target="_rWiDkHqMEeu93Nq_vwWm5w">
+          <type href="../US_meta/UserStories.ecore#//UserStory/role"/>
+        </edges>
+      </lhs>
+      <rhs xmi:id="_vjm9cXqLEeu93Nq_vwWm5w" name="Rhs">
+        <nodes xmi:id="_vjm9cnqLEeu93Nq_vwWm5w" outgoing="_9mapkHnKEeuXZrSHFC6uYQ">
+          <type href="../BPMN_meta/BPMN20.ecore#//Process"/>
+          <attributes xmi:id="_vjm9c3qLEeu93Nq_vwWm5w" value="name+&quot;Process&quot;">
+            <type href="../BPMN_meta/BPMN20.ecore#//BaseElement/id"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_mHqncHqLEeu93Nq_vwWm5w" incoming="_9mapkHnKEeuXZrSHFC6uYQ">
+          <type href="../BPMN_meta/BPMN20.ecore#//Task"/>
+          <attributes xmi:id="_mHqncXqLEeu93Nq_vwWm5w" value="ActivityName">
+            <type href="../BPMN_meta/BPMN20.ecore#//BaseElement/id"/>
+          </attributes>
+          <attributes xmi:id="_mHqncnqLEeu93Nq_vwWm5w" value="ActivityName">
+            <type href="../BPMN_meta/BPMN20.ecore#//FlowElement/name"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_vjmWYHqLEeu93Nq_vwWm5w" outgoing="_r-D9oXqMEeu93Nq_vwWm5w">
+          <type href="../US_meta/UserStories.ecore#//Activity"/>
+          <attributes xmi:id="_vjmWYXqLEeu93Nq_vwWm5w" value="ActivityName">
+            <type href="../US_meta/UserStories.ecore#//UserStory/id"/>
+          </attributes>
+          <attributes xmi:id="_vjmWYnqLEeu93Nq_vwWm5w" value="ActivityName">
+            <type href="../US_meta/UserStories.ecore#//Activity/name"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_vjm9j3qLEeu93Nq_vwWm5w">
+          <type href="../US_meta/UserStories.ecore#//Activity"/>
+          <attributes xmi:id="_vjm9kHqLEeu93Nq_vwWm5w" value="ActivityName">
+            <type href="../US_meta/UserStories.ecore#//UserStory/id"/>
+          </attributes>
+          <attributes xmi:id="_vjm9kXqLEeu93Nq_vwWm5w" value="ActivityName">
+            <type href="../US_meta/UserStories.ecore#//Activity/name"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_rWj4wHqMEeu93Nq_vwWm5w" incoming="_r-D9oXqMEeu93Nq_vwWm5w">
+          <type href="../US_meta/UserStories.ecore#//Role"/>
+          <attributes xmi:id="_snU9EXqMEeu93Nq_vwWm5w" value="name">
+            <type href="../US_meta/UserStories.ecore#//Role/name"/>
+          </attributes>
+        </nodes>
+        <edges xmi:id="_9mapkHnKEeuXZrSHFC6uYQ" source="_vjm9cnqLEeu93Nq_vwWm5w" target="_mHqncHqLEeu93Nq_vwWm5w">
+          <type href="../BPMN_meta/BPMN20.ecore#//FlowElementsContainer/flowElements"/>
+        </edges>
+        <edges xmi:id="_r-D9oXqMEeu93Nq_vwWm5w" source="_vjmWYHqLEeu93Nq_vwWm5w" target="_rWj4wHqMEeu93Nq_vwWm5w">
+          <type href="../US_meta/UserStories.ecore#//UserStory/role"/>
+        </edges>
+      </rhs>
+      <mappings xmi:id="_vjm9fXqLEeu93Nq_vwWm5w" origin="_vjm9enqLEeu93Nq_vwWm5w" image="_vjm9cnqLEeu93Nq_vwWm5w"/>
+      <mappings xmi:id="_vjmWY3qLEeu93Nq_vwWm5w" origin="_t9Sf5HqLEeu93Nq_vwWm5w" image="_vjmWYHqLEeu93Nq_vwWm5w"/>
+      <mappings xmi:id="_rWj4wXqMEeu93Nq_vwWm5w" origin="_rWiDkHqMEeu93Nq_vwWm5w" image="_rWj4wHqMEeu93Nq_vwWm5w"/>
+      <multiMappings xmi:id="_vjm9dHqLEeu93Nq_vwWm5w" origin="_sMPrAXnFEeuXZrSHFC6uYQ" image="_vjm9cnqLEeu93Nq_vwWm5w"/>
+      <multiMappings xmi:id="_vjm9fHqLEeu93Nq_vwWm5w" origin="_sMPrAHnFEeuXZrSHFC6uYQ" image="_vjm9enqLEeu93Nq_vwWm5w"/>
+      <multiMappings xmi:id="_vjm9knqLEeu93Nq_vwWm5w" origin="_t9Sf4HqLEeu93Nq_vwWm5w" image="_vjm9j3qLEeu93Nq_vwWm5w"/>
+    </multiRules>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_i17mcHnGEeuXZrSHFC6uYQ" name="CreateComplexGatway">
+    <parameters xmi:id="_Bk7DUHnHEeuXZrSHFC6uYQ" name="EventId" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_N4qF0HnHEeuXZrSHFC6uYQ" name="name" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_i1_34HnGEeuXZrSHFC6uYQ" name="Lhs">
+      <nodes xmi:id="_bPlqsHnHEeuXZrSHFC6uYQ">
+        <type href="../BPMN_meta/BPMN20.ecore#//Process"/>
+        <attributes xmi:id="_e8QwwHnHEeuXZrSHFC6uYQ" value="name+&quot;Process&quot;">
+          <type href="../BPMN_meta/BPMN20.ecore#//CallableElement/name"/>
+        </attributes>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_i1_34XnGEeuXZrSHFC6uYQ" name="Rhs">
+      <nodes xmi:id="_bPlqsXnHEeuXZrSHFC6uYQ">
+        <type href="../BPMN_meta/BPMN20.ecore#//Process"/>
+        <attributes xmi:id="_e8QwwXnHEeuXZrSHFC6uYQ" value="name+&quot;Process&quot;">
+          <type href="../BPMN_meta/BPMN20.ecore#//CallableElement/name"/>
+        </attributes>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_bPmRwHnHEeuXZrSHFC6uYQ" origin="_bPlqsHnHEeuXZrSHFC6uYQ" image="_bPlqsXnHEeuXZrSHFC6uYQ"/>
+    <multiRules xmi:id="_QqymgHnYEeu1j4PqRzC4dg">
+      <parameters xmi:id="_Qq57QHnYEeu1j4PqRzC4dg" name="EventId" kind="VAR">
+        <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameters>
+      <parameters xmi:id="_Qq6iUHnYEeu1j4PqRzC4dg" name="name" kind="IN">
+        <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameters>
+      <lhs xmi:id="_QqymgXnYEeu1j4PqRzC4dg" name="Lhs">
+        <nodes xmi:id="_QqzNp3nYEeu1j4PqRzC4dg">
+          <type href="../BPMN_meta/BPMN20.ecore#//Process"/>
+          <attributes xmi:id="_QqzNqHnYEeu1j4PqRzC4dg" value="name">
+            <type href="../BPMN_meta/BPMN20.ecore#//CallableElement/name"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_RgUJAHnHEeuXZrSHFC6uYQ" incoming="_Hx42oHqdEeu93Nq_vwWm5w">
+          <type href="../US_meta/UserStories.ecore#//Role"/>
+          <attributes xmi:id="_SQEK8HnHEeuXZrSHFC6uYQ" value="name">
+            <type href="../US_meta/UserStories.ecore#//Role/name"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_2dElIHnGEeuXZrSHFC6uYQ" outgoing="_Hx42oHqdEeu93Nq_vwWm5w">
+          <type href="../US_meta/UserStories.ecore#//Event"/>
+          <attributes xmi:id="_GOKfUHnHEeuXZrSHFC6uYQ" value="EventId">
+            <type href="../US_meta/UserStories.ecore#//UserStory/id"/>
+          </attributes>
+        </nodes>
+        <edges xmi:id="_Hx42oHqdEeu93Nq_vwWm5w" source="_2dElIHnGEeuXZrSHFC6uYQ" target="_RgUJAHnHEeuXZrSHFC6uYQ">
+          <type href="../US_meta/UserStories.ecore#//UserStory/role"/>
+        </edges>
+      </lhs>
+      <rhs xmi:id="_QqymgnnYEeu1j4PqRzC4dg" name="Rhs">
+        <nodes xmi:id="_QqzNnnnYEeu1j4PqRzC4dg" outgoing="_pu3-wHnHEeuXZrSHFC6uYQ">
+          <type href="../BPMN_meta/BPMN20.ecore#//Process"/>
+          <attributes xmi:id="_QqzNn3nYEeu1j4PqRzC4dg" value="name">
+            <type href="../BPMN_meta/BPMN20.ecore#//CallableElement/name"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_iKN6gHnHEeuXZrSHFC6uYQ" incoming="_pu3-wHnHEeuXZrSHFC6uYQ">
+          <type href="../BPMN_meta/BPMN20.ecore#//ComplexGateway"/>
+          <attributes xmi:id="_kGZTUHnHEeuXZrSHFC6uYQ" value="EventId">
+            <type href="../BPMN_meta/BPMN20.ecore#//BaseElement/id"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_RgVXIHnHEeuXZrSHFC6uYQ" incoming="_Hx42oXqdEeu93Nq_vwWm5w">
+          <type href="../US_meta/UserStories.ecore#//Role"/>
+          <attributes xmi:id="_SQEK8XnHEeuXZrSHFC6uYQ" value="name">
+            <type href="../US_meta/UserStories.ecore#//Role/name"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_2dFMMHnGEeuXZrSHFC6uYQ" outgoing="_Hx42oXqdEeu93Nq_vwWm5w">
+          <type href="../US_meta/UserStories.ecore#//Event"/>
+          <attributes xmi:id="_GOM7kHnHEeuXZrSHFC6uYQ" value="EventId">
+            <type href="../US_meta/UserStories.ecore#//UserStory/id"/>
+          </attributes>
+        </nodes>
+        <edges xmi:id="_Hx42oXqdEeu93Nq_vwWm5w" source="_2dFMMHnGEeuXZrSHFC6uYQ" target="_RgVXIHnHEeuXZrSHFC6uYQ">
+          <type href="../US_meta/UserStories.ecore#//UserStory/role"/>
+        </edges>
+        <edges xmi:id="_pu3-wHnHEeuXZrSHFC6uYQ" source="_QqzNnnnYEeu1j4PqRzC4dg" target="_iKN6gHnHEeuXZrSHFC6uYQ">
+          <type href="../BPMN_meta/BPMN20.ecore#//FlowElementsContainer/flowElements"/>
+        </edges>
+      </rhs>
+      <mappings xmi:id="_QqzNq3nYEeu1j4PqRzC4dg" origin="_QqzNp3nYEeu1j4PqRzC4dg" image="_QqzNnnnYEeu1j4PqRzC4dg"/>
+      <mappings xmi:id="_2dFMMXnGEeuXZrSHFC6uYQ" origin="_2dElIHnGEeuXZrSHFC6uYQ" image="_2dFMMHnGEeuXZrSHFC6uYQ"/>
+      <mappings xmi:id="_RgVXIXnHEeuXZrSHFC6uYQ" origin="_RgUJAHnHEeuXZrSHFC6uYQ" image="_RgVXIHnHEeuXZrSHFC6uYQ"/>
+      <multiMappings xmi:id="_QqzNoXnYEeu1j4PqRzC4dg" origin="_bPlqsXnHEeuXZrSHFC6uYQ" image="_QqzNnnnYEeu1j4PqRzC4dg"/>
+      <multiMappings xmi:id="_QqzNqnnYEeu1j4PqRzC4dg" origin="_bPlqsHnHEeuXZrSHFC6uYQ" image="_QqzNp3nYEeu1j4PqRzC4dg"/>
+    </multiRules>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_s7zNwHnHEeuXZrSHFC6uYQ" name="CreateExclusiveGatway">
+    <parameters xmi:id="_s7zNwXnHEeuXZrSHFC6uYQ" name="EventId" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_s7zNwnnHEeuXZrSHFC6uYQ" name="name" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_s7zNw3nHEeuXZrSHFC6uYQ" name="Lhs">
+      <nodes xmi:id="_s7zNyXnHEeuXZrSHFC6uYQ">
+        <type href="../BPMN_meta/BPMN20.ecore#//Process"/>
+        <attributes xmi:id="_s7zNy3nHEeuXZrSHFC6uYQ" value="name+&quot;Process&quot;">
+          <type href="../BPMN_meta/BPMN20.ecore#//CallableElement/name"/>
+        </attributes>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_s7zNzXnHEeuXZrSHFC6uYQ" name="Rhs">
+      <nodes xmi:id="_s7zN03nHEeuXZrSHFC6uYQ">
+        <type href="../BPMN_meta/BPMN20.ecore#//Process"/>
+        <attributes xmi:id="_s7zN1XnHEeuXZrSHFC6uYQ" value="name+&quot;Process&quot;">
+          <type href="../BPMN_meta/BPMN20.ecore#//CallableElement/name"/>
+        </attributes>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_s7zN3XnHEeuXZrSHFC6uYQ" origin="_s7zNyXnHEeuXZrSHFC6uYQ" image="_s7zN03nHEeuXZrSHFC6uYQ"/>
+    <multiRules xmi:id="_9Lp1kHqNEeu93Nq_vwWm5w">
+      <parameters xmi:id="_9LvVIHqNEeu93Nq_vwWm5w" name="EventId" kind="VAR">
+        <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameters>
+      <parameters xmi:id="_9LvVIXqNEeu93Nq_vwWm5w" name="name" kind="IN">
+        <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameters>
+      <lhs xmi:id="_9Lp1kXqNEeu93Nq_vwWm5w" name="Lhs">
+        <nodes xmi:id="_s7zNxHnHEeuXZrSHFC6uYQ" outgoing="_s7zNzHnHEeuXZrSHFC6uYQ">
+          <type href="../US_meta/UserStories.ecore#//Event"/>
+          <attributes xmi:id="_s7zNxXnHEeuXZrSHFC6uYQ" value="&quot;exclusiveGatway&quot;">
+            <type href="../US_meta/UserStories.ecore#//Event/EventType"/>
+          </attributes>
+          <attributes xmi:id="_s7zNxnnHEeuXZrSHFC6uYQ" value="EventId">
+            <type href="../US_meta/UserStories.ecore#//UserStory/id"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_s7zNx3nHEeuXZrSHFC6uYQ" incoming="_s7zNzHnHEeuXZrSHFC6uYQ">
+          <type href="../US_meta/UserStories.ecore#//Role"/>
+          <attributes xmi:id="_s7zNyHnHEeuXZrSHFC6uYQ" value="name">
+            <type href="../US_meta/UserStories.ecore#//Role/name"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_9LqcpXqNEeu93Nq_vwWm5w">
+          <type href="../BPMN_meta/BPMN20.ecore#//Process"/>
+          <attributes xmi:id="_9LqcpnqNEeu93Nq_vwWm5w" value="name">
+            <type href="../BPMN_meta/BPMN20.ecore#//CallableElement/name"/>
+          </attributes>
+        </nodes>
+        <edges xmi:id="_s7zNzHnHEeuXZrSHFC6uYQ" source="_s7zNxHnHEeuXZrSHFC6uYQ" target="_s7zNx3nHEeuXZrSHFC6uYQ">
+          <type href="../US_meta/UserStories.ecore#//UserStory/role"/>
+        </edges>
+      </lhs>
+      <rhs xmi:id="_9Lp1knqNEeu93Nq_vwWm5w" name="Rhs">
+        <nodes xmi:id="_s7zNznnHEeuXZrSHFC6uYQ" outgoing="_s7zN2XnHEeuXZrSHFC6uYQ">
+          <type href="../US_meta/UserStories.ecore#//Event"/>
+          <attributes xmi:id="_s7zNz3nHEeuXZrSHFC6uYQ" value="&quot;exclusiveGatway&quot;">
+            <type href="../US_meta/UserStories.ecore#//Event/EventType"/>
+          </attributes>
+          <attributes xmi:id="_s7zN0HnHEeuXZrSHFC6uYQ" value="EventId">
+            <type href="../US_meta/UserStories.ecore#//UserStory/id"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_s7zN0XnHEeuXZrSHFC6uYQ" incoming="_s7zN2XnHEeuXZrSHFC6uYQ">
+          <type href="../US_meta/UserStories.ecore#//Role"/>
+          <attributes xmi:id="_s7zN0nnHEeuXZrSHFC6uYQ" value="name">
+            <type href="../US_meta/UserStories.ecore#//Role/name"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_9Lp1pXqNEeu93Nq_vwWm5w" outgoing="_s7zN2nnHEeuXZrSHFC6uYQ">
+          <type href="../BPMN_meta/BPMN20.ecore#//Process"/>
+          <attributes xmi:id="_9Lp1pnqNEeu93Nq_vwWm5w" value="name">
+            <type href="../BPMN_meta/BPMN20.ecore#//CallableElement/name"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_s7zN1nnHEeuXZrSHFC6uYQ" incoming="_s7zN2nnHEeuXZrSHFC6uYQ">
+          <type href="../BPMN_meta/BPMN20.ecore#//ExclusiveGateway"/>
+          <attributes xmi:id="_s7zN13nHEeuXZrSHFC6uYQ" value="EventId">
+            <type href="../BPMN_meta/BPMN20.ecore#//BaseElement/id"/>
+          </attributes>
+          <attributes xmi:id="_s7zN2HnHEeuXZrSHFC6uYQ" value="&quot;exclusiveGatway&quot;">
+            <type href="../BPMN_meta/BPMN20.ecore#//FlowElement/name"/>
+          </attributes>
+        </nodes>
+        <edges xmi:id="_s7zN2XnHEeuXZrSHFC6uYQ" source="_s7zNznnHEeuXZrSHFC6uYQ" target="_s7zN0XnHEeuXZrSHFC6uYQ">
+          <type href="../US_meta/UserStories.ecore#//UserStory/role"/>
+        </edges>
+        <edges xmi:id="_s7zN2nnHEeuXZrSHFC6uYQ" source="_9Lp1pXqNEeu93Nq_vwWm5w" target="_s7zN1nnHEeuXZrSHFC6uYQ">
+          <type href="../BPMN_meta/BPMN20.ecore#//FlowElementsContainer/flowElements"/>
+        </edges>
+      </rhs>
+      <mappings xmi:id="_9LqcqXqNEeu93Nq_vwWm5w" origin="_9LqcpXqNEeu93Nq_vwWm5w" image="_9Lp1pXqNEeu93Nq_vwWm5w"/>
+      <mappings xmi:id="_s7zN23nHEeuXZrSHFC6uYQ" origin="_s7zNxHnHEeuXZrSHFC6uYQ" image="_s7zNznnHEeuXZrSHFC6uYQ"/>
+      <mappings xmi:id="_s7zN3HnHEeuXZrSHFC6uYQ" origin="_s7zNx3nHEeuXZrSHFC6uYQ" image="_s7zN0XnHEeuXZrSHFC6uYQ"/>
+      <multiMappings xmi:id="_9Lp1qHqNEeu93Nq_vwWm5w" origin="_s7zN03nHEeuXZrSHFC6uYQ" image="_9Lp1pXqNEeu93Nq_vwWm5w"/>
+      <multiMappings xmi:id="_9LqcqHqNEeu93Nq_vwWm5w" origin="_s7zNyXnHEeuXZrSHFC6uYQ" image="_9LqcpXqNEeu93Nq_vwWm5w"/>
+    </multiRules>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_4QVdEHnHEeuXZrSHFC6uYQ" name="CreateInclusiveGatway">
+    <parameters xmi:id="_4QVdEXnHEeuXZrSHFC6uYQ" name="EventId" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_4QVdEnnHEeuXZrSHFC6uYQ" name="name" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_4QVdE3nHEeuXZrSHFC6uYQ" name="Lhs">
+      <nodes xmi:id="_4QVdGXnHEeuXZrSHFC6uYQ">
+        <type href="../BPMN_meta/BPMN20.ecore#//Process"/>
+        <attributes xmi:id="_4QVdG3nHEeuXZrSHFC6uYQ" value="name+&quot;Process&quot;">
+          <type href="../BPMN_meta/BPMN20.ecore#//CallableElement/name"/>
+        </attributes>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_4QVdHXnHEeuXZrSHFC6uYQ" name="Rhs">
+      <nodes xmi:id="_4QVdI3nHEeuXZrSHFC6uYQ">
+        <type href="../BPMN_meta/BPMN20.ecore#//Process"/>
+        <attributes xmi:id="_4QVdJXnHEeuXZrSHFC6uYQ" value="name+&quot;Process&quot;">
+          <type href="../BPMN_meta/BPMN20.ecore#//CallableElement/name"/>
+        </attributes>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_4QVdLXnHEeuXZrSHFC6uYQ" origin="_4QVdGXnHEeuXZrSHFC6uYQ" image="_4QVdI3nHEeuXZrSHFC6uYQ"/>
+    <multiRules xmi:id="__YQQAHqNEeu93Nq_vwWm5w">
+      <parameters xmi:id="__YZZ8HqNEeu93Nq_vwWm5w" name="EventId" kind="VAR">
+        <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameters>
+      <parameters xmi:id="__YZZ8XqNEeu93Nq_vwWm5w" name="name" kind="IN">
+        <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameters>
+      <lhs xmi:id="__YReIHqNEeu93Nq_vwWm5w" name="Lhs">
+        <nodes xmi:id="_4QVdFHnHEeuXZrSHFC6uYQ" outgoing="_4QVdHHnHEeuXZrSHFC6uYQ">
+          <type href="../US_meta/UserStories.ecore#//Event"/>
+          <attributes xmi:id="_4QVdFXnHEeuXZrSHFC6uYQ" value="&quot;exclusiveGatway&quot;">
+            <type href="../US_meta/UserStories.ecore#//Event/EventType"/>
+          </attributes>
+          <attributes xmi:id="_4QVdFnnHEeuXZrSHFC6uYQ" value="EventId">
+            <type href="../US_meta/UserStories.ecore#//UserStory/id"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_4QVdF3nHEeuXZrSHFC6uYQ" incoming="_4QVdHHnHEeuXZrSHFC6uYQ">
+          <type href="../US_meta/UserStories.ecore#//Role"/>
+          <attributes xmi:id="_4QVdGHnHEeuXZrSHFC6uYQ" value="name">
+            <type href="../US_meta/UserStories.ecore#//Role/name"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="__YRePXqNEeu93Nq_vwWm5w">
+          <type href="../BPMN_meta/BPMN20.ecore#//Process"/>
+          <attributes xmi:id="__YRePnqNEeu93Nq_vwWm5w" value="name">
+            <type href="../BPMN_meta/BPMN20.ecore#//CallableElement/name"/>
+          </attributes>
+        </nodes>
+        <edges xmi:id="_4QVdHHnHEeuXZrSHFC6uYQ" source="_4QVdFHnHEeuXZrSHFC6uYQ" target="_4QVdF3nHEeuXZrSHFC6uYQ">
+          <type href="../US_meta/UserStories.ecore#//UserStory/role"/>
+        </edges>
+      </lhs>
+      <rhs xmi:id="__YReIXqNEeu93Nq_vwWm5w" name="Rhs">
+        <nodes xmi:id="_4QVdHnnHEeuXZrSHFC6uYQ" outgoing="_4QVdKXnHEeuXZrSHFC6uYQ">
+          <type href="../US_meta/UserStories.ecore#//Event"/>
+          <attributes xmi:id="_4QVdH3nHEeuXZrSHFC6uYQ" value="&quot;exclusiveGatway&quot;">
+            <type href="../US_meta/UserStories.ecore#//Event/EventType"/>
+          </attributes>
+          <attributes xmi:id="_4QVdIHnHEeuXZrSHFC6uYQ" value="EventId">
+            <type href="../US_meta/UserStories.ecore#//UserStory/id"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_4QVdIXnHEeuXZrSHFC6uYQ" incoming="_4QVdKXnHEeuXZrSHFC6uYQ">
+          <type href="../US_meta/UserStories.ecore#//Role"/>
+          <attributes xmi:id="_4QVdInnHEeuXZrSHFC6uYQ" value="name">
+            <type href="../US_meta/UserStories.ecore#//Role/name"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="__YReNHqNEeu93Nq_vwWm5w" outgoing="_4QVdKnnHEeuXZrSHFC6uYQ">
+          <type href="../BPMN_meta/BPMN20.ecore#//Process"/>
+          <attributes xmi:id="__YReNXqNEeu93Nq_vwWm5w" value="name">
+            <type href="../BPMN_meta/BPMN20.ecore#//CallableElement/name"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_4QVdJnnHEeuXZrSHFC6uYQ" incoming="_4QVdKnnHEeuXZrSHFC6uYQ">
+          <type href="../BPMN_meta/BPMN20.ecore#//InclusiveGateway"/>
+          <attributes xmi:id="_4QVdJ3nHEeuXZrSHFC6uYQ" value="EventId">
+            <type href="../BPMN_meta/BPMN20.ecore#//BaseElement/id"/>
+          </attributes>
+          <attributes xmi:id="_4QVdKHnHEeuXZrSHFC6uYQ" value="&quot;exclusiveGatway&quot;">
+            <type href="../BPMN_meta/BPMN20.ecore#//FlowElement/name"/>
+          </attributes>
+        </nodes>
+        <edges xmi:id="_4QVdKXnHEeuXZrSHFC6uYQ" source="_4QVdHnnHEeuXZrSHFC6uYQ" target="_4QVdIXnHEeuXZrSHFC6uYQ">
+          <type href="../US_meta/UserStories.ecore#//UserStory/role"/>
+        </edges>
+        <edges xmi:id="_4QVdKnnHEeuXZrSHFC6uYQ" source="__YReNHqNEeu93Nq_vwWm5w" target="_4QVdJnnHEeuXZrSHFC6uYQ">
+          <type href="../BPMN_meta/BPMN20.ecore#//FlowElementsContainer/flowElements"/>
+        </edges>
+      </rhs>
+      <mappings xmi:id="__YSFMXqNEeu93Nq_vwWm5w" origin="__YRePXqNEeu93Nq_vwWm5w" image="__YReNHqNEeu93Nq_vwWm5w"/>
+      <mappings xmi:id="_4QVdK3nHEeuXZrSHFC6uYQ" origin="_4QVdFHnHEeuXZrSHFC6uYQ" image="_4QVdHnnHEeuXZrSHFC6uYQ"/>
+      <mappings xmi:id="_4QVdLHnHEeuXZrSHFC6uYQ" origin="_4QVdF3nHEeuXZrSHFC6uYQ" image="_4QVdIXnHEeuXZrSHFC6uYQ"/>
+      <multiMappings xmi:id="__YReN3qNEeu93Nq_vwWm5w" origin="_4QVdI3nHEeuXZrSHFC6uYQ" image="__YReNHqNEeu93Nq_vwWm5w"/>
+      <multiMappings xmi:id="__YSFMHqNEeu93Nq_vwWm5w" origin="_4QVdGXnHEeuXZrSHFC6uYQ" image="__YRePXqNEeu93Nq_vwWm5w"/>
+    </multiRules>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_G3KjkHnIEeuXZrSHFC6uYQ" name="CreateParallelGatway">
+    <parameters xmi:id="_G3KjkXnIEeuXZrSHFC6uYQ" name="EventId" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_G3KjknnIEeuXZrSHFC6uYQ" name="name" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_G3Kjk3nIEeuXZrSHFC6uYQ" name="Lhs">
+      <nodes xmi:id="_G3KjmXnIEeuXZrSHFC6uYQ">
+        <type href="../BPMN_meta/BPMN20.ecore#//Process"/>
+        <attributes xmi:id="_G3Kjm3nIEeuXZrSHFC6uYQ" value="name+&quot;Process&quot;">
+          <type href="../BPMN_meta/BPMN20.ecore#//CallableElement/name"/>
+        </attributes>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_G3KjnXnIEeuXZrSHFC6uYQ" name="Rhs">
+      <nodes xmi:id="_G3Kjo3nIEeuXZrSHFC6uYQ">
+        <type href="../BPMN_meta/BPMN20.ecore#//Process"/>
+        <attributes xmi:id="_G3KjpXnIEeuXZrSHFC6uYQ" value="name+&quot;Process&quot;">
+          <type href="../BPMN_meta/BPMN20.ecore#//CallableElement/name"/>
+        </attributes>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_G3KjrXnIEeuXZrSHFC6uYQ" origin="_G3KjmXnIEeuXZrSHFC6uYQ" image="_G3Kjo3nIEeuXZrSHFC6uYQ"/>
+    <multiRules xmi:id="_Hhj5cHqOEeu93Nq_vwWm5w">
+      <parameters xmi:id="_Hhr1QHqOEeu93Nq_vwWm5w" name="EventId" kind="VAR">
+        <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameters>
+      <parameters xmi:id="_Hhr1QXqOEeu93Nq_vwWm5w" name="name" kind="IN">
+        <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameters>
+      <lhs xmi:id="_HhlHkHqOEeu93Nq_vwWm5w" name="Lhs">
+        <nodes xmi:id="_G3KjlHnIEeuXZrSHFC6uYQ" outgoing="_G3KjnHnIEeuXZrSHFC6uYQ">
+          <type href="../US_meta/UserStories.ecore#//Event"/>
+          <attributes xmi:id="_G3KjlXnIEeuXZrSHFC6uYQ" value="&quot;parallelGatway&quot;">
+            <type href="../US_meta/UserStories.ecore#//Event/EventType"/>
+          </attributes>
+          <attributes xmi:id="_G3KjlnnIEeuXZrSHFC6uYQ" value="EventId">
+            <type href="../US_meta/UserStories.ecore#//UserStory/id"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_G3Kjl3nIEeuXZrSHFC6uYQ" incoming="_G3KjnHnIEeuXZrSHFC6uYQ">
+          <type href="../US_meta/UserStories.ecore#//Role"/>
+          <attributes xmi:id="_G3KjmHnIEeuXZrSHFC6uYQ" value="name">
+            <type href="../US_meta/UserStories.ecore#//Role/name"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_Hhlus3qOEeu93Nq_vwWm5w">
+          <type href="../BPMN_meta/BPMN20.ecore#//Process"/>
+          <attributes xmi:id="_HhlutHqOEeu93Nq_vwWm5w" value="name">
+            <type href="../BPMN_meta/BPMN20.ecore#//CallableElement/name"/>
+          </attributes>
+        </nodes>
+        <edges xmi:id="_G3KjnHnIEeuXZrSHFC6uYQ" source="_G3KjlHnIEeuXZrSHFC6uYQ" target="_G3Kjl3nIEeuXZrSHFC6uYQ">
+          <type href="../US_meta/UserStories.ecore#//UserStory/role"/>
+        </edges>
+      </lhs>
+      <rhs xmi:id="_HhlHkXqOEeu93Nq_vwWm5w" name="Rhs">
+        <nodes xmi:id="_G3KjnnnIEeuXZrSHFC6uYQ" outgoing="_G3KjqXnIEeuXZrSHFC6uYQ">
+          <type href="../US_meta/UserStories.ecore#//Event"/>
+          <attributes xmi:id="_G3Kjn3nIEeuXZrSHFC6uYQ" value="&quot;parallelGatway&quot;">
+            <type href="../US_meta/UserStories.ecore#//Event/EventType"/>
+          </attributes>
+          <attributes xmi:id="_G3KjoHnIEeuXZrSHFC6uYQ" value="EventId">
+            <type href="../US_meta/UserStories.ecore#//UserStory/id"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_G3KjoXnIEeuXZrSHFC6uYQ" incoming="_G3KjqXnIEeuXZrSHFC6uYQ">
+          <type href="../US_meta/UserStories.ecore#//Role"/>
+          <attributes xmi:id="_G3KjonnIEeuXZrSHFC6uYQ" value="name">
+            <type href="../US_meta/UserStories.ecore#//Role/name"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_HhluqnqOEeu93Nq_vwWm5w" outgoing="_G3KjqnnIEeuXZrSHFC6uYQ">
+          <type href="../BPMN_meta/BPMN20.ecore#//Process"/>
+          <attributes xmi:id="_Hhluq3qOEeu93Nq_vwWm5w" value="name">
+            <type href="../BPMN_meta/BPMN20.ecore#//CallableElement/name"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_G3KjpnnIEeuXZrSHFC6uYQ" incoming="_G3KjqnnIEeuXZrSHFC6uYQ">
+          <type href="../BPMN_meta/BPMN20.ecore#//ParallelGateway"/>
+          <attributes xmi:id="_G3Kjp3nIEeuXZrSHFC6uYQ" value="EventId">
+            <type href="../BPMN_meta/BPMN20.ecore#//BaseElement/id"/>
+          </attributes>
+          <attributes xmi:id="_G3KjqHnIEeuXZrSHFC6uYQ" value="&quot;parallelGatway&quot;">
+            <type href="../BPMN_meta/BPMN20.ecore#//FlowElement/name"/>
+          </attributes>
+        </nodes>
+        <edges xmi:id="_G3KjqXnIEeuXZrSHFC6uYQ" source="_G3KjnnnIEeuXZrSHFC6uYQ" target="_G3KjoXnIEeuXZrSHFC6uYQ">
+          <type href="../US_meta/UserStories.ecore#//UserStory/role"/>
+        </edges>
+        <edges xmi:id="_G3KjqnnIEeuXZrSHFC6uYQ" source="_HhluqnqOEeu93Nq_vwWm5w" target="_G3KjpnnIEeuXZrSHFC6uYQ">
+          <type href="../BPMN_meta/BPMN20.ecore#//FlowElementsContainer/flowElements"/>
+        </edges>
+      </rhs>
+      <mappings xmi:id="_Hhlut3qOEeu93Nq_vwWm5w" origin="_Hhlus3qOEeu93Nq_vwWm5w" image="_HhluqnqOEeu93Nq_vwWm5w"/>
+      <mappings xmi:id="_G3Kjq3nIEeuXZrSHFC6uYQ" origin="_G3KjlHnIEeuXZrSHFC6uYQ" image="_G3KjnnnIEeuXZrSHFC6uYQ"/>
+      <mappings xmi:id="_G3KjrHnIEeuXZrSHFC6uYQ" origin="_G3Kjl3nIEeuXZrSHFC6uYQ" image="_G3KjoXnIEeuXZrSHFC6uYQ"/>
+      <multiMappings xmi:id="_HhlurXqOEeu93Nq_vwWm5w" origin="_G3Kjo3nIEeuXZrSHFC6uYQ" image="_HhluqnqOEeu93Nq_vwWm5w"/>
+      <multiMappings xmi:id="_HhlutnqOEeu93Nq_vwWm5w" origin="_G3KjmXnIEeuXZrSHFC6uYQ" image="_Hhlus3qOEeu93Nq_vwWm5w"/>
+    </multiRules>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_YzsakHnIEeuXZrSHFC6uYQ" name="StartEvent">
+    <parameters xmi:id="_YzsaknnIEeuXZrSHFC6uYQ" name="name" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_H_Ro0HqREeu93Nq_vwWm5w" name="EventID" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_Yzsak3nIEeuXZrSHFC6uYQ" name="Lhs">
+      <nodes xmi:id="_Yzsal3nIEeuXZrSHFC6uYQ" incoming="_YzsanHnIEeuXZrSHFC6uYQ">
+        <type href="../US_meta/UserStories.ecore#//Role"/>
+        <attributes xmi:id="_YzsamHnIEeuXZrSHFC6uYQ" value="name">
+          <type href="../US_meta/UserStories.ecore#//Role/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_YzsamXnIEeuXZrSHFC6uYQ">
+        <type href="../BPMN_meta/BPMN20.ecore#//Process"/>
+        <attributes xmi:id="_PN2PwHnKEeuXZrSHFC6uYQ" value="name+&quot;Process&quot;">
+          <type href="../BPMN_meta/BPMN20.ecore#//BaseElement/id"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_YzsalHnIEeuXZrSHFC6uYQ" outgoing="_YzsanHnIEeuXZrSHFC6uYQ">
+        <type href="../US_meta/UserStories.ecore#//Event"/>
+        <attributes xmi:id="_2BhCwHqQEeu93Nq_vwWm5w" value="&quot;startEvent&quot;">
+          <type href="../US_meta/UserStories.ecore#//Event/EventType"/>
+        </attributes>
+        <attributes xmi:id="_Lg8_0HqREeu93Nq_vwWm5w" value="EventID">
+          <type href="../US_meta/UserStories.ecore#//UserStory/id"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_YzsanHnIEeuXZrSHFC6uYQ" source="_YzsalHnIEeuXZrSHFC6uYQ" target="_Yzsal3nIEeuXZrSHFC6uYQ">
+        <type href="../US_meta/UserStories.ecore#//UserStory/role"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_YzsanXnIEeuXZrSHFC6uYQ" name="Rhs">
+      <nodes xmi:id="_YzsaoXnIEeuXZrSHFC6uYQ" incoming="_YzsaqXnIEeuXZrSHFC6uYQ">
+        <type href="../US_meta/UserStories.ecore#//Role"/>
+        <attributes xmi:id="_YzsaonnIEeuXZrSHFC6uYQ" value="name">
+          <type href="../US_meta/UserStories.ecore#//Role/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Yzsao3nIEeuXZrSHFC6uYQ" outgoing="_YzsaqnnIEeuXZrSHFC6uYQ">
+        <type href="../BPMN_meta/BPMN20.ecore#//Process"/>
+        <attributes xmi:id="_PN2PwXnKEeuXZrSHFC6uYQ" value="name+&quot;Process&quot;">
+          <type href="../BPMN_meta/BPMN20.ecore#//BaseElement/id"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_YzsapnnIEeuXZrSHFC6uYQ" incoming="_YzsaqnnIEeuXZrSHFC6uYQ">
+        <type href="../BPMN_meta/BPMN20.ecore#//StartEvent"/>
+        <attributes xmi:id="_YzsaqHnIEeuXZrSHFC6uYQ" value="&quot;startEvent&quot;">
+          <type href="../BPMN_meta/BPMN20.ecore#//FlowElement/name"/>
+        </attributes>
+        <attributes xmi:id="_MjxuwHqREeu93Nq_vwWm5w" value="EventID">
+          <type href="../BPMN_meta/BPMN20.ecore#//BaseElement/id"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_YzsannnIEeuXZrSHFC6uYQ" outgoing="_YzsaqXnIEeuXZrSHFC6uYQ">
+        <type href="../US_meta/UserStories.ecore#//Event"/>
+        <attributes xmi:id="_2Bi38HqQEeu93Nq_vwWm5w" value="&quot;startEvent&quot;">
+          <type href="../US_meta/UserStories.ecore#//Event/EventType"/>
+        </attributes>
+        <attributes xmi:id="_Lg-1AHqREeu93Nq_vwWm5w" value="EventID">
+          <type href="../US_meta/UserStories.ecore#//UserStory/id"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_YzsaqnnIEeuXZrSHFC6uYQ" source="_Yzsao3nIEeuXZrSHFC6uYQ" target="_YzsapnnIEeuXZrSHFC6uYQ">
+        <type href="../BPMN_meta/BPMN20.ecore#//FlowElementsContainer/flowElements"/>
+      </edges>
+      <edges xmi:id="_YzsaqXnIEeuXZrSHFC6uYQ" source="_YzsannnIEeuXZrSHFC6uYQ" target="_YzsaoXnIEeuXZrSHFC6uYQ">
+        <type href="../US_meta/UserStories.ecore#//UserStory/role"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_YzsarHnIEeuXZrSHFC6uYQ" origin="_Yzsal3nIEeuXZrSHFC6uYQ" image="_YzsaoXnIEeuXZrSHFC6uYQ"/>
+    <mappings xmi:id="_YzsarXnIEeuXZrSHFC6uYQ" origin="_YzsamXnIEeuXZrSHFC6uYQ" image="_Yzsao3nIEeuXZrSHFC6uYQ"/>
+    <mappings xmi:id="_Yzsaq3nIEeuXZrSHFC6uYQ" origin="_YzsalHnIEeuXZrSHFC6uYQ" image="_YzsannnIEeuXZrSHFC6uYQ"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_eOhEgHnIEeuXZrSHFC6uYQ" name="EndEvent">
+    <parameters xmi:id="_eOhEgXnIEeuXZrSHFC6uYQ" name="EventID" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_eOhEgnnIEeuXZrSHFC6uYQ" name="name" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_eOhEg3nIEeuXZrSHFC6uYQ" name="Lhs">
+      <nodes xmi:id="_eOhEhHnIEeuXZrSHFC6uYQ" outgoing="_eOhEjHnIEeuXZrSHFC6uYQ">
+        <type href="../US_meta/UserStories.ecore#//Event"/>
+        <attributes xmi:id="_eOhEhXnIEeuXZrSHFC6uYQ" value="&quot;endEvent&quot;">
+          <type href="../US_meta/UserStories.ecore#//Event/EventType"/>
+        </attributes>
+        <attributes xmi:id="_eOhEhnnIEeuXZrSHFC6uYQ" value="EventID">
+          <type href="../US_meta/UserStories.ecore#//UserStory/id"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_eOhEh3nIEeuXZrSHFC6uYQ" incoming="_eOhEjHnIEeuXZrSHFC6uYQ">
+        <type href="../US_meta/UserStories.ecore#//Role"/>
+        <attributes xmi:id="_eOhEiHnIEeuXZrSHFC6uYQ" value="name">
+          <type href="../US_meta/UserStories.ecore#//Role/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_eOhEiXnIEeuXZrSHFC6uYQ">
+        <type href="../BPMN_meta/BPMN20.ecore#//Process"/>
+        <attributes xmi:id="_RCmx8HnKEeuXZrSHFC6uYQ" value="name+&quot;Process&quot;">
+          <type href="../BPMN_meta/BPMN20.ecore#//BaseElement/id"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_eOhEjHnIEeuXZrSHFC6uYQ" source="_eOhEhHnIEeuXZrSHFC6uYQ" target="_eOhEh3nIEeuXZrSHFC6uYQ">
+        <type href="../US_meta/UserStories.ecore#//UserStory/role"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_eOhEjXnIEeuXZrSHFC6uYQ" name="Rhs">
+      <nodes xmi:id="_eOhEjnnIEeuXZrSHFC6uYQ" outgoing="_eOhEmXnIEeuXZrSHFC6uYQ">
+        <type href="../US_meta/UserStories.ecore#//Event"/>
+        <attributes xmi:id="_eOhEj3nIEeuXZrSHFC6uYQ" value="&quot;endEvent&quot;">
+          <type href="../US_meta/UserStories.ecore#//Event/EventType"/>
+        </attributes>
+        <attributes xmi:id="_eOhEkHnIEeuXZrSHFC6uYQ" value="EventID">
+          <type href="../US_meta/UserStories.ecore#//UserStory/id"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_eOhEkXnIEeuXZrSHFC6uYQ" incoming="_eOhEmXnIEeuXZrSHFC6uYQ">
+        <type href="../US_meta/UserStories.ecore#//Role"/>
+        <attributes xmi:id="_eOhEknnIEeuXZrSHFC6uYQ" value="name">
+          <type href="../US_meta/UserStories.ecore#//Role/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_eOhEk3nIEeuXZrSHFC6uYQ" outgoing="_eOhEmnnIEeuXZrSHFC6uYQ">
+        <type href="../BPMN_meta/BPMN20.ecore#//Process"/>
+        <attributes xmi:id="_RCmx8XnKEeuXZrSHFC6uYQ" value="name+&quot;Process&quot;">
+          <type href="../BPMN_meta/BPMN20.ecore#//BaseElement/id"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_eOhElnnIEeuXZrSHFC6uYQ" incoming="_eOhEmnnIEeuXZrSHFC6uYQ">
+        <type href="../BPMN_meta/BPMN20.ecore#//EndEvent"/>
+        <attributes xmi:id="_eOhEl3nIEeuXZrSHFC6uYQ" value="EventID">
+          <type href="../BPMN_meta/BPMN20.ecore#//BaseElement/id"/>
+        </attributes>
+        <attributes xmi:id="_eOhEmHnIEeuXZrSHFC6uYQ" value="&quot;endEvent&quot;">
+          <type href="../BPMN_meta/BPMN20.ecore#//FlowElement/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_eOhEmXnIEeuXZrSHFC6uYQ" source="_eOhEjnnIEeuXZrSHFC6uYQ" target="_eOhEkXnIEeuXZrSHFC6uYQ">
+        <type href="../US_meta/UserStories.ecore#//UserStory/role"/>
+      </edges>
+      <edges xmi:id="_eOhEmnnIEeuXZrSHFC6uYQ" source="_eOhEk3nIEeuXZrSHFC6uYQ" target="_eOhElnnIEeuXZrSHFC6uYQ">
+        <type href="../BPMN_meta/BPMN20.ecore#//FlowElementsContainer/flowElements"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_eOhEm3nIEeuXZrSHFC6uYQ" origin="_eOhEhHnIEeuXZrSHFC6uYQ" image="_eOhEjnnIEeuXZrSHFC6uYQ"/>
+    <mappings xmi:id="_eOhEnHnIEeuXZrSHFC6uYQ" origin="_eOhEh3nIEeuXZrSHFC6uYQ" image="_eOhEkXnIEeuXZrSHFC6uYQ"/>
+    <mappings xmi:id="_eOhEnXnIEeuXZrSHFC6uYQ" origin="_eOhEiXnIEeuXZrSHFC6uYQ" image="_eOhEk3nIEeuXZrSHFC6uYQ"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_Iu2ngHnUEeu1j4PqRzC4dg" name="CreateSequenceFlow">
+    <parameters xmi:id="_t2Gm8HnUEeu1j4PqRzC4dg" name="from" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_xKkoYHnUEeu1j4PqRzC4dg" name="to" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_3eVFcHnUEeu1j4PqRzC4dg" name="name" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_IvBmoHnUEeu1j4PqRzC4dg" name="Lhs">
+      <nodes xmi:id="_cP0MAHqgEeu93Nq_vwWm5w">
+        <type href="../BPMN_meta/BPMN20.ecore#//Process"/>
+        <attributes xmi:id="_dm3egHqgEeu93Nq_vwWm5w" value="name+&quot;Process&quot;">
+          <type href="../BPMN_meta/BPMN20.ecore#//BaseElement/id"/>
+        </attributes>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_IvCNsHnUEeu1j4PqRzC4dg" name="Rhs">
+      <nodes xmi:id="_cP0MAXqgEeu93Nq_vwWm5w">
+        <type href="../BPMN_meta/BPMN20.ecore#//Process"/>
+        <attributes xmi:id="_dm3egXqgEeu93Nq_vwWm5w" value="name+&quot;Process&quot;">
+          <type href="../BPMN_meta/BPMN20.ecore#//BaseElement/id"/>
+        </attributes>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_cP0MAnqgEeu93Nq_vwWm5w" origin="_cP0MAHqgEeu93Nq_vwWm5w" image="_cP0MAXqgEeu93Nq_vwWm5w"/>
+    <multiRules xmi:id="_YjbZ0HqgEeu93Nq_vwWm5w">
+      <parameters xmi:id="_YjgSUHqgEeu93Nq_vwWm5w" name="from" kind="VAR">
+        <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameters>
+      <parameters xmi:id="_YjgSUXqgEeu93Nq_vwWm5w" name="to" kind="VAR">
+        <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameters>
+      <parameters xmi:id="_YjgSUnqgEeu93Nq_vwWm5w" name="name" kind="IN">
+        <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameters>
+      <lhs xmi:id="_YjbZ0XqgEeu93Nq_vwWm5w" name="Lhs">
+        <nodes xmi:id="_W-WSYHqgEeu93Nq_vwWm5w" outgoing="_XwUh4HqgEeu93Nq_vwWm5w">
+          <type href="../US_meta/UserStories.ecore#//UserStory"/>
+          <attributes xmi:id="_jCpKsHqgEeu93Nq_vwWm5w" value="from">
+            <type href="../US_meta/UserStories.ecore#//UserStory/id"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_XUQ4AHqgEeu93Nq_vwWm5w" incoming="_XwUh4HqgEeu93Nq_vwWm5w">
+          <type href="../US_meta/UserStories.ecore#//UserStory"/>
+          <attributes xmi:id="_jzbHYHqgEeu93Nq_vwWm5w" value="to">
+            <type href="../US_meta/UserStories.ecore#//UserStory/id"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_cP0zEnqgEeu93Nq_vwWm5w">
+          <type href="../BPMN_meta/BPMN20.ecore#//Process"/>
+        </nodes>
+        <edges xmi:id="_XwUh4HqgEeu93Nq_vwWm5w" source="_W-WSYHqgEeu93Nq_vwWm5w" target="_XUQ4AHqgEeu93Nq_vwWm5w">
+          <type href="../US_meta/UserStories.ecore#//UserStory/successeur"/>
+        </edges>
+      </lhs>
+      <rhs xmi:id="_YjbZ0nqgEeu93Nq_vwWm5w" name="Rhs">
+        <nodes xmi:id="_UcFOMHnVEeu1j4PqRzC4dg" incoming="_f23LMHqgEeu93Nq_vwWm5w">
+          <type href="../BPMN_meta/BPMN20.ecore#//SequenceFlow"/>
+          <attributes xmi:id="_vv_O0HnWEeu1j4PqRzC4dg" value="&quot;seqFlow&quot;+from+&quot;to&quot;+to">
+            <type href="../BPMN_meta/BPMN20.ecore#//BaseElement/id"/>
+          </attributes>
+          <attributes xmi:id="_kXiZsHqjEeu93Nq_vwWm5w" value="from+&quot;2&quot;+to">
+            <type href="../BPMN_meta/BPMN20.ecore#//FlowElement/name"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_W-WSYXqgEeu93Nq_vwWm5w" outgoing="_XwUh4XqgEeu93Nq_vwWm5w">
+          <type href="../US_meta/UserStories.ecore#//UserStory"/>
+          <attributes xmi:id="_jCpKsXqgEeu93Nq_vwWm5w" value="from">
+            <type href="../US_meta/UserStories.ecore#//UserStory/id"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_XUQ4AXqgEeu93Nq_vwWm5w" incoming="_XwUh4XqgEeu93Nq_vwWm5w">
+          <type href="../US_meta/UserStories.ecore#//UserStory"/>
+          <attributes xmi:id="_jzbHYXqgEeu93Nq_vwWm5w" value="to">
+            <type href="../US_meta/UserStories.ecore#//UserStory/id"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_cP0zEHqgEeu93Nq_vwWm5w" outgoing="_f23LMHqgEeu93Nq_vwWm5w">
+          <type href="../BPMN_meta/BPMN20.ecore#//Process"/>
+        </nodes>
+        <edges xmi:id="_XwUh4XqgEeu93Nq_vwWm5w" source="_W-WSYXqgEeu93Nq_vwWm5w" target="_XUQ4AXqgEeu93Nq_vwWm5w">
+          <type href="../US_meta/UserStories.ecore#//UserStory/successeur"/>
+        </edges>
+        <edges xmi:id="_f23LMHqgEeu93Nq_vwWm5w" source="_cP0zEHqgEeu93Nq_vwWm5w" target="_UcFOMHnVEeu1j4PqRzC4dg">
+          <type href="../BPMN_meta/BPMN20.ecore#//FlowElementsContainer/flowElements"/>
+        </edges>
+      </rhs>
+      <mappings xmi:id="_W-WSYnqgEeu93Nq_vwWm5w" origin="_W-WSYHqgEeu93Nq_vwWm5w" image="_W-WSYXqgEeu93Nq_vwWm5w"/>
+      <mappings xmi:id="_cP0zFHqgEeu93Nq_vwWm5w" origin="_cP0zEnqgEeu93Nq_vwWm5w" image="_cP0zEHqgEeu93Nq_vwWm5w"/>
+      <mappings xmi:id="_XUQ4AnqgEeu93Nq_vwWm5w" origin="_XUQ4AHqgEeu93Nq_vwWm5w" image="_XUQ4AXqgEeu93Nq_vwWm5w"/>
+      <multiMappings xmi:id="_cP0zEXqgEeu93Nq_vwWm5w" origin="_cP0MAXqgEeu93Nq_vwWm5w" image="_cP0zEHqgEeu93Nq_vwWm5w"/>
+      <multiMappings xmi:id="_cP0zE3qgEeu93Nq_vwWm5w" origin="_cP0MAHqgEeu93Nq_vwWm5w" image="_cP0zEnqgEeu93Nq_vwWm5w"/>
+    </multiRules>
+  </units>
+  <units xsi:type="henshin:SequentialUnit" xmi:id="_jmz9oHpyEeuha7FtSsql_g" name="MainUnit" subUnits="_bYOGcHnAEeum17r4CxAcPg _-VfaMHqHEeu93Nq_vwWm5w _YzsakHnIEeuXZrSHFC6uYQ _eOhEgHnIEeuXZrSHFC6uYQ _Iu2ngHnUEeu1j4PqRzC4dg">
+    <parameters xmi:id="_nRW8wHpyEeuha7FtSsql_g" name="BacklogId" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_pzaCwHpyEeuha7FtSsql_g" name="name" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameterMappings xmi:id="_r75ZQHpyEeuha7FtSsql_g" source="_nRW8wHpyEeuha7FtSsql_g" target="_TMTjAHnCEeu2Hft-zWXcuw"/>
+    <parameterMappings xmi:id="_wb-5QHpyEeuha7FtSsql_g" source="_pzaCwHpyEeuha7FtSsql_g" target="_lbRN0HnCEeu2Hft-zWXcuw"/>
+    <parameterMappings xmi:id="_5NSmwHqGEeu93Nq_vwWm5w" source="_nRW8wHpyEeuha7FtSsql_g" target="_FN4OUHqIEeu93Nq_vwWm5w"/>
+    <parameterMappings xmi:id="_7AzLwHqGEeu93Nq_vwWm5w" source="_pzaCwHpyEeuha7FtSsql_g" target="_FybF0HqIEeu93Nq_vwWm5w"/>
+    <parameterMappings xmi:id="_RBDAwHqQEeu93Nq_vwWm5w" source="_pzaCwHpyEeuha7FtSsql_g" target="_YzsaknnIEeuXZrSHFC6uYQ"/>
+    <parameterMappings xmi:id="_e2XVUHqREeu93Nq_vwWm5w" source="_pzaCwHpyEeuha7FtSsql_g" target="_eOhEgnnIEeuXZrSHFC6uYQ"/>
+    <parameterMappings xmi:id="_cbMOMHqjEeu93Nq_vwWm5w" source="_pzaCwHpyEeuha7FtSsql_g" target="_3eVFcHnUEeu1j4PqRzC4dg"/>
+  </units>
+  <units xsi:type="henshin:IteratedUnit" xmi:id="_-VfaMHqHEeu93Nq_vwWm5w" name="tasks" subUnit="_flGPMHnDEeu2Hft-zWXcuw" iterations="1">
+    <parameters xmi:id="_FN4OUHqIEeu93Nq_vwWm5w" name="BacklogId" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_FybF0HqIEeu93Nq_vwWm5w" name="name" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameterMappings xmi:id="_KfGQUHqIEeu93Nq_vwWm5w" source="_FN4OUHqIEeu93Nq_vwWm5w" target="_Qkok0HqAEeu93Nq_vwWm5w"/>
+    <parameterMappings xmi:id="_MzacUHqIEeu93Nq_vwWm5w" source="_FybF0HqIEeu93Nq_vwWm5w" target="_WWzXwHqAEeu93Nq_vwWm5w"/>
+  </units>
+  <units xsi:type="henshin:SequentialUnit" xmi:id="_UNJQsHqNEeu93Nq_vwWm5w" name="CreateEvents" subUnits="_i17mcHnGEeuXZrSHFC6uYQ _s7zNwHnHEeuXZrSHFC6uYQ _4QVdEHnHEeuXZrSHFC6uYQ _G3KjkHnIEeuXZrSHFC6uYQ">
+    <parameters xmi:id="_tLCfYHqSEeu93Nq_vwWm5w" name="name" description="" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameterMappings xmi:id="_vV3_QHqSEeu93Nq_vwWm5w" source="_tLCfYHqSEeu93Nq_vwWm5w" target="_N4qF0HnHEeuXZrSHFC6uYQ"/>
+    <parameterMappings xmi:id="_wHK5UHqSEeu93Nq_vwWm5w" source="_tLCfYHqSEeu93Nq_vwWm5w" target="_s7zNwnnHEeuXZrSHFC6uYQ"/>
+    <parameterMappings xmi:id="_whHqYHqSEeu93Nq_vwWm5w" source="_tLCfYHqSEeu93Nq_vwWm5w" target="_4QVdEnnHEeuXZrSHFC6uYQ"/>
+    <parameterMappings xmi:id="_w7M-UHqSEeu93Nq_vwWm5w" source="_tLCfYHqSEeu93Nq_vwWm5w" target="_G3KjknnIEeuXZrSHFC6uYQ"/>
+  </units>
+</henshin:Module>

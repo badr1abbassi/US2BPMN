@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:US="http://US" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI" xsi:schemaLocation="http://US UserStories.ecore http://www.omg.org/spec/BPMN/20100524/MODEL-XMI ../BPMN_meta/BPMN20.ecore">
+  <US:Backlog backlogId="UserID">
+    <uss xsi:type="US:Event" id="idStartEvent" EventType="startEvent">
+      <role name="User"/>
+      <successeur xsi:type="US:Activity" id="Activity1" name="checkEmail"/>
+    </uss>
+    <uss xsi:type="US:Activity" id="checkEmail" name="checkEmail">
+      <role name="User"/>
+      <successeur xsi:type="US:Activity" id="Fremer Email" name="FermerEmail">
+        <role name="User"/>
+      </successeur>
+    </uss>
+    <uss xsi:type="US:Activity" id="FremerEmail" name="FremerEmail">
+      <role name="User"/>
+      <successeur xsi:type="US:Event" id="endEventId"/>
+    </uss>
+    <uss xsi:type="US:Event" id="endEventId" EventType="endEvent">
+      <role name="User"/>
+    </uss>
+    <uss xsi:type="US:Event" id="exclusiveGatwayID1" EventType="exclusiveGatway">
+      <role name="User"/>
+    </uss>
+  </US:Backlog>
+  <bpmn:Definitions id="UserID">
+    <rootElements xsi:type="bpmn:Process" id="UserProcess" name="User">
+      <flowElements xsi:type="bpmn:Task" id="FremerEmail" name="FremerEmail"/>
+      <flowElements xsi:type="bpmn:Task" id="checkEmail" name="checkEmail"/>
+      <flowElements xsi:type="bpmn:StartEvent" id="idStartEvent" name="startEvent"/>
+      <flowElements xsi:type="bpmn:EndEvent" id="endEventId" name="endEvent"/>
+      <flowElements xsi:type="bpmn:SequenceFlow" id="seqFlowidStartEventtoActivity1" name="idStartEvent2Activity1"/>
+      <flowElements xsi:type="bpmn:SequenceFlow" id="seqFlowFremerEmailtoendEventId" name="FremerEmail2endEventId"/>
+      <flowElements xsi:type="bpmn:SequenceFlow" id="seqFlowcheckEmailtoFremer Email" name="checkEmail2Fremer Email"/>
+      <laneSets id="LaneSetUser">
+        <lanes id="LaneUser"/>
+      </laneSets>
+    </rootElements>
+    <rootElements xsi:type="bpmn:Collaboration" name="User"/>
+  </bpmn:Definitions>
+  <US:Activity/>
+</xmi:XMI>
